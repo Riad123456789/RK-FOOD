@@ -1,0 +1,91 @@
+[
+    {
+      "id": 1,
+      "name": "Turmeric Powder",
+      "description": "A bright yellow spice powder made from dried turmeric roots, known for its earthy aroma and health benefits.",
+      "price": 4.99,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "In Stock",
+      "rating": 4.7,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Red Chili Powder",
+      "description": "A vibrant and fiery spice made from dried red chilies, perfect for adding heat to dishes.",
+      "price": 5.49,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "In Stock",
+      "rating": 4.5,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 3,
+      "name": "Coriander Powder",
+      "description": "A flavorful spice made from ground coriander seeds, offering a mild and aromatic taste.",
+      "price": 3.99,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "Limited Stock",
+      "rating": 4.6,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 4,
+      "name": "Cumin Powder",
+      "description": "A warm and earthy spice made from ground cumin seeds, essential in many cuisines.",
+      "price": 4.29,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "In Stock",
+      "rating": 4.8,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 5,
+      "name": "Garam Masala",
+      "description": "A traditional Indian spice blend made from a mix of ground spices like cardamom, cloves, and cinnamon.",
+      "price": 6.99,
+      "weight": "50g",
+      "category": "Spice Blends",
+      "availability": "In Stock",
+      "rating": 4.9,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 6,
+      "name": "Black Pepper Powder",
+      "description": "Finely ground black pepper, offering a sharp and pungent flavor to enhance any dish.",
+      "price": 5.89,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "Out of Stock",
+      "rating": 4.3,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 7,
+      "name": "Fennel Powder",
+      "description": "A sweet and aromatic spice made from ground fennel seeds, often used in desserts and teas.",
+      "price": 4.49,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "In Stock",
+      "rating": 4.6,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    },
+    {
+      "id": 8,
+      "name": "Mustard Powder",
+      "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+      "price": 3.79,
+      "weight": "100g",
+      "category": "Spices",
+      "availability": "In Stock",
+      "rating": 4.2,
+      "image_url": "https://i.ibb.co.com/tHGV7rz/Screenshot-30-removebg-preview-1.png"
+    }
+  ]
+  
