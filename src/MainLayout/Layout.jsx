@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { MdOutlineFavoriteBorder, MdAccountCircle } from 'react-icons/md'
 import { TbCategoryPlus } from 'react-icons/tb'
 import { IoHome } from 'react-icons/io5'
@@ -10,9 +10,12 @@ import { FaInstagramSquare } from 'react-icons/fa'
 import { Link, Outlet } from 'react-router-dom'
 import Logo from '../../public/rk logo.svg'
 import TopBar from './TopBar'
+import { WishlistContext } from '../ContextApi/WishlistContext'
+import Foother from '../Foother/Foother'
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const { wishlist } = useContext(WishlistContext)
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
@@ -43,17 +46,17 @@ const Layout = () => {
           >
             <div className='flex items-center gap-2'>
               <IoHome size={20}></IoHome>
-              Home
+              HOME
             </div>
           </Link>
           <Link
-            to='/Wishlist'
+            to='/Aboutus'
             onClick={toggleSidebar}
             className='hover:text-orange-400'
           >
             <div className='flex items-center gap-2'>
               <MdOutlineFavoriteBorder size={20}></MdOutlineFavoriteBorder>
-              Wishlist
+           ABOUT US
             </div>
           </Link>
           <Link
@@ -113,17 +116,24 @@ const Layout = () => {
       )}
 
       {/* Dynamic Content */}
-      <div className='flex-grow overflow-y-auto bg-white z-10 h-[1000px]'>
+      <div className='flex-grow overflow-y-auto bg-white z-10 '>
         <Outlet />
+      </div>
+
+      <div>
+        <Foother></Foother>
       </div>
 
       {/* Bottom Navigation */}
       <div className='bg-gray-100 rounded-t-md h-[10%] border-t border-orange-400 sticky bottom-0 z-20'>
         <div className='h-full flex items-center justify-around'>
           <Link to='/Wishlist'>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center relative'>
               <MdOutlineFavoriteBorder size={18} color='#FF5733' />
               <p className='text-xs font-normal text-center'>Wishlist</p>
+              <span className='absolute -top-1 -right-3 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center'>
+                {wishlist.length}
+              </span>
             </div>
           </Link>
 

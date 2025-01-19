@@ -23,6 +23,8 @@ const TopBar = ({ toggleSidebar }) => {
       })
   }, [])
 
+  
+
   useEffect(() => {
     // Filter the data whenever the search query changes
     if (searchQuery.trim() === '') {
@@ -40,6 +42,9 @@ const TopBar = ({ toggleSidebar }) => {
   }
 
   const openModal = (item, type) => {
+    // Clear the search input
+    setSearchQuery('')
+
     const content =
       type === 'view'
         ? { title: `View: ${item.name}`, details: item }
@@ -99,11 +104,7 @@ const TopBar = ({ toggleSidebar }) => {
                       size={15}
                       onClick={() => openModal(item, 'view')}
                     />
-                    <FaExternalLinkAlt
-                      className='cursor-pointer'
-                      size={15}
-                      onClick={() => openModal(item, 'external')}
-                    />
+                    <FaExternalLinkAlt className='cursor-pointer' size={15} />
                   </div>
                   <img className='w-8 h-12' src={item.image_url} alt='image' />
 
@@ -127,6 +128,7 @@ const TopBar = ({ toggleSidebar }) => {
       </div>
       {/* Modal */}
       <ComponentWithModal
+        data={data}
         isModalOpen={isModalOpen}
         modalContent={modalContent}
         closeModal={closeModal}
