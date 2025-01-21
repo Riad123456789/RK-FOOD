@@ -3,6 +3,7 @@ import { GrFormSearch } from 'react-icons/gr'
 import { FaEye, FaExternalLinkAlt } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import ComponentWithModal from './ComponentWithModal'
+import { Link } from 'react-router'
 
 const TopBar = ({ toggleSidebar }) => {
   const [data, setData] = useState([]) // Store the fetched data
@@ -22,8 +23,6 @@ const TopBar = ({ toggleSidebar }) => {
         console.error('Error fetching data:', error)
       })
   }, [])
-
-  
 
   useEffect(() => {
     // Filter the data whenever the search query changes
@@ -97,29 +96,41 @@ const TopBar = ({ toggleSidebar }) => {
                 key={item.id}
                 className='flex gap-3 justify-between hover:bg-[#c7c7c7] bg-[#f0f0f0] py-2 px-3'
               >
-                <div className='flex gap-6 items-center'>
+                <div className='flex gap-6 items-center justify-around'>
                   <div className='space-y-3'>
                     <FaEye
                       className='cursor-pointer'
                       size={15}
                       onClick={() => openModal(item, 'view')}
                     />
-                    <FaExternalLinkAlt className='cursor-pointer' size={15} />
+                    <Link
+                      to={`/ProductDetails/${item.id}`}
+                      onClick={() => setSearchQuery('')}
+                    >
+                      <FaExternalLinkAlt className='cursor-pointer' size={15} />
+                    </Link>
                   </div>
-                  <img className='w-8 h-12' src={item.image_url} alt='image' />
-
-                  <div
-                    className='cursor-pointer text-sm font-normal'
-                    onClick={() => alert(`Selected: ${item.name}`)} // Example action
+                  <Link
+                    to={`/ProductDetails/${item.id}`}
+                    onClick={() => setSearchQuery('')}
                   >
-                    {item.name}
-                    <p className='text-[#ff8229]'>{item.category}</p>
-                  </div>
-                </div>
+                    <div className='flex  items-center justify-between gap-5 '>
+                      <img
+                        className='w-8 h-12'
+                        src={item.image_url}
+                        alt='image'
+                      />
+                      <div className='cursor-pointer text-sm font-normal'>
+                        {item.name}
+                        <p className='text-[#ff8229]'>{item.category}</p>
+                      </div>
 
-                <div className='space-y-1'>
-                  <p className='text-sm'>{item.price}</p>
-                  <p className='text-sm text-[#2cd282]'>{item.weight}</p>
+                      <div className='space-y-1'>
+                        <p className='text-sm'>{item.price}</p>
+                        <p className='text-sm text-[#2cd282]'>{item.weight}</p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </div>
             ))}

@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { WishlistContext } from '../ContextApi/WishlistContext'
-
+import { Link } from 'react-router'
 
 const Product = () => {
   const [products, setProducts] = useState([]) // State to store all products
   const [filteredProducts, setFilteredProducts] = useState([]) // State for filtered products
   const [loading, setLoading] = useState(true) // Loading state
   const [filterOption, setFilterOption] = useState('default') // Sort and filter option
-  const {addToWishlist} = useContext(WishlistContext)
-
+  const { addToWishlist } = useContext(WishlistContext)
 
   useEffect(() => {
     // Fetch all products data
@@ -57,8 +56,8 @@ const Product = () => {
 
   // Function to handle "Add to Wishlist"
   const handleAddToWishlist = product => {
-    addToWishlist(product);
-    }
+    addToWishlist(product)
+  }
 
   return (
     <div>
@@ -92,30 +91,32 @@ const Product = () => {
                 key={product.id}
                 className='border rounded-sm shadow-md hover:shadow-lg bg-[#5cdac3]'
               >
-                <div className='w-full bg-white pb-2 pt-7'>
-                  <img
-                    src={product.image_url}
-                    alt={product.name}
-                    className='w-20 h-28 rounded-md mb-3 mx-auto'
-                  />
-                </div>
-                <div className='px-3 py-4 space-y-1'>
-                  <h3 className='font-medium text-gray-700 text-sm'>
-                    {product.name}
-                  </h3>
-                  <p className='text-sm text-gray-500'>
-                    Weight: {product.weight}
-                  </p>
-                  <p className='font-bold'> $ {product.price}</p>
-
-                  <div className='pt-2'>
-                    <button
-                      onClick={() => handleAddToWishlist(product)}
-                      className='text-xs font-semibold bg-orange-600 text-white text-center w-full py-3 rounded-sm'
-                    >
-                      Add To Wishlist
-                    </button>
+                <Link to={`/ProductDetails/${product.id}`}>
+                  <div className='cursor-wait'>
+                    <div className='w-full bg-white pb-2 pt-7'>
+                      <img
+                        src={product.image_url}
+                        alt={product.name}
+                        className='w-20 h-28 rounded-md mb-3 mx-auto'
+                      />
+                    </div>
+                    <div className='px-3 py-4 space-y-1'>
+                      <h3 className='font-medium text-gray-700 text-sm'>
+                        {product.name}
+                      </h3>
+                      <p className='text-sm text-gray-500'>{product.weight}</p>
+                      <p className='font-bold'>$ {product.price}</p>
+                    </div>
                   </div>
+                </Link>
+
+                <div className='py-3 px-3'>
+                  <button
+                    onClick={() => handleAddToWishlist(product)}
+                    className='text-xs font-semibold bg-orange-600 text-white text-center w-full py-3 rounded-sm'
+                  >
+                    Add To Wishlist
+                  </button>
                 </div>
               </div>
             ))}

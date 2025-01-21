@@ -60,13 +60,13 @@ const Layout = () => {
             </div>
           </Link>
           <Link
-            to='/Category'
+            to='/Contactus'
             onClick={toggleSidebar}
             className='hover:text-orange-400'
           >
             <div className='flex items-center gap-2'>
               <TbCategoryPlus size={20}></TbCategoryPlus>
-              Category
+              CONTACT US
             </div>
           </Link>
           <Link
