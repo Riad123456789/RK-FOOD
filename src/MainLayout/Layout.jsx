@@ -23,16 +23,50 @@ const Layout = () => {
 
   return (
     <div className='flex flex-col min-h-screen relative'>
+      <div className='w-full h-9 bg-[#fe6c23]  items-center justify-between px-20 hidden lg:flex'>
+        <div>
+          <p className='text-xs font-semibold text-[white]'>
+            Office Time : 08:00 AM - 12:00 AM | Hotline : +8801303149712
+          </p>
+        </div>
+        {/* Social Media Icons */}
+        <div className='hidden lg:flex items-center gap-1'>
+          {[FaFacebookSquare, IoLogoYoutube, FaLinkedin, FaInstagramSquare].map(
+            (Icon, index) => (
+              <div key={index} className=' p-2 rounded-full cursor-pointer'>
+                <Icon size={20} color='white' />
+              </div>
+            )
+          )}
+        </div>
+      </div>
+
       {/* Top Bar */}
       <TopBar toggleSidebar={toggleSidebar}></TopBar>
 
+      <div className='h-14 w-full bg-[#f3f3f3] items-center hidden lg:flex px-20'>
+        <div className='flex items-center gap-6 text-xs font-semibold'>
+          <Link to='/' className='hover:text-orange-400'>
+            HOME
+          </Link>
+          <Link to='/Product' className='hover:text-orange-400'>
+            ALL PRODUCTS
+          </Link>
+          <Link to='/Aboutus' className='hover:text-orange-400'>
+            ABOUT US
+          </Link>
+          <Link to='/Contactus' className='hover:text-orange-400'>
+            CONTACT US
+          </Link>
+        </div>
+      </div>
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full bg-[black] text-white w-72 transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 z-30`}
       >
-        <div className='flex justify-between items-center bg-orange-600 px-4'>
+        <div className='flex justify-between items-center bg-orange-600 px-4 py-1'>
           <img className='w-14 h-14 ' src={Logo} alt='' />
           <button className='text-white text-xl' onClick={toggleSidebar}>
             ✕
@@ -56,7 +90,7 @@ const Layout = () => {
           >
             <div className='flex items-center gap-2'>
               <MdOutlineFavoriteBorder size={20}></MdOutlineFavoriteBorder>
-           ABOUT US
+              ABOUT US
             </div>
           </Link>
           <Link
@@ -125,7 +159,7 @@ const Layout = () => {
       </div>
 
       {/* Bottom Navigation */}
-      <div className='bg-gray-100 rounded-t-md h-[10%] border-t border-orange-400 sticky bottom-0 z-20'>
+      <div className='bg-gray-100 rounded-t-md h-[10%] border-t border-orange-400 sticky bottom-0 z-20 block lg:hidden'>
         <div className='h-full flex items-center justify-around'>
           <Link to='/Wishlist'>
             <div className='flex flex-col items-center relative'>

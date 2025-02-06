@@ -13,7 +13,8 @@ import Production from '../Home/PremiumPage/Production'
 import Packaging from '../Home/PremiumPage/Packaging'
 import Service from '../Home/PremiumPage/Service'
 import ProductDetails from '../Home/ProductDetails'
-import Contactus from '../../dist/Contactus/Contactus'
+import Contactus from '../Contact/Contactus'
+
 
 const router = createBrowserRouter([
   {
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Contactus',
-        element: <Contactus></Contactus>
+        element:<Contactus></Contactus>
       }
     ]
   }
