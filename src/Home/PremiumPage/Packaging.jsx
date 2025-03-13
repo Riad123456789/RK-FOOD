@@ -1,19 +1,21 @@
 import React from 'react'
-import img from '../../../public/img.png'
+import img from '../../../public/packaging.png'
 import img2 from '../../../public/products.svg'
+
 const Packaging = () => {
   return (
-    <div className=''>
-      <div className=' px-3 md:px-6 lg:px-20 py-3 lg:flex gap-5'>
-        <div className='pb-8 lg:flex-1  '>
+    <div>
+      <div className='px-3 md:px-6 lg:px-20 py-3 lg:flex gap-5'>
+        <div className='pb-8 lg:flex-1'>
           <img
-            className='w-full h-full object-cover lg:object-contain  rounded-sm '
-            src={img}
+            className='w-full h-full object-cover lg:object-contain rounded-sm'
+            src={`${img}?t=${new Date().getTime()}`} // Forces reload
             alt='Premium Sourcing'
+            loading='lazy' // Enables lazy loading
           />
         </div>
 
-        <div className='  lg:flex-1 '>
+        <div className='lg:flex-1'>
           <h1 className='text-center md:text-left text-2xl md:text-3xl font-bold text-gray-800 mb-2'>
             Premium Packaging
           </h1>
@@ -28,7 +30,7 @@ const Packaging = () => {
             system.
           </p>
 
-          <h2 className='text-center md:text-left text-xl md:text-xl font-semibold text-orange-600 mb-2'>
+          <h2 className='text-center md:text-left text-xl font-semibold text-orange-600 mb-2'>
             Maintaining Hygiene
           </h2>
           <p className='text-sm text-justify text-gray-700 leading-relaxed mb-4'>
@@ -39,7 +41,7 @@ const Packaging = () => {
             cleanliness.
           </p>
 
-          <h2 className='text-center md:text-left text-xl md:text-xl font-semibold text-orange-600 mb-2'>
+          <h2 className='text-center md:text-left text-xl font-semibold text-orange-600 mb-2'>
             Safety
           </h2>
           <p className='text-sm text-justify text-gray-700 leading-relaxed mb-4'>
@@ -53,7 +55,7 @@ const Packaging = () => {
       </div>
 
       <div className='pt-3 px-3 md:px-6 lg:px-20 py-3 lg:flex gap-5'>
-        <div className='  lg:flex-1 '>
+        <div className='lg:flex-1'>
           <h2 className='text-center text-2xl md:text-3xl font-bold mb-4'>
             What We Offer
           </h2>
@@ -89,11 +91,12 @@ const Packaging = () => {
           </ul>
         </div>
 
-        <div className='pb-2 p-3 lg:flex-1 xl:p-16 '>
+        <div className='pb-2 p-3 lg:flex-1 xl:p-16'>
           <img
-            className='w-full h-full object-cover  rounded-sm '
-            src={img2}
+            className='w-full h-full object-cover rounded-sm'
+            src={`${img2}?t=${new Date().getTime()}`} // Forces reload
             alt='Premium Sourcing'
+            loading='lazy' // Enables lazy loading
           />
         </div>
       </div>

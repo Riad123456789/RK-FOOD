@@ -21,23 +21,48 @@ const Layout = () => {
     setIsSidebarOpen(!isSidebarOpen)
   }
 
+  const socialLinks = [
+    { icon: <FaFacebookSquare size={25} />, url: 'https://www.facebook.com' },
+    { icon: <IoLogoYoutube size={25} />, url: 'https://www.youtube.com' },
+    { icon: <FaLinkedin size={25} />, url: 'https://www.linkedin.com' },
+    { icon: <FaInstagramSquare size={25} />, url: 'https://www.instagram.com' }
+  ]
+
   return (
     <div className='flex flex-col min-h-screen relative'>
       <div className='w-full h-9 bg-[#fe6c23]  items-center justify-between px-20 hidden lg:flex'>
         <div>
           <p className='text-xs font-semibold text-[white]'>
-            Office Time : 08:00 AM - 12:00 AM | Hotline : +8801303149712
+            Office Time : 08:00 AM - 12:00 AM | Hotline : +8801795579568
           </p>
         </div>
         {/* Social Media Icons */}
         <div className='hidden lg:flex items-center gap-1'>
-          {[FaFacebookSquare, IoLogoYoutube, FaLinkedin, FaInstagramSquare].map(
-            (Icon, index) => (
-              <div key={index} className=' p-2 rounded-full cursor-pointer'>
-                <Icon size={20} color='white' />
-              </div>
-            )
-          )}
+          {[
+            {
+              Icon: FaFacebookSquare,
+              url: 'https://www.facebook.com/rktrading.com.bd'
+            },
+            {
+              Icon: IoLogoYoutube,
+              url: 'https://www.youtube.com/@rktrading873'
+            },
+            { Icon: FaLinkedin, url: 'https://www.linkedin.com' },
+            {
+              Icon: FaInstagramSquare,
+              url: 'https://www.instagram.com/rktradingbd'
+            }
+          ].map(({ Icon, url }, index) => (
+            <a
+              key={index}
+              href={url}
+              // target='_blank'
+              rel='noopener noreferrer'
+              className=' p-2 rounded-full cursor-pointer transition-transform transform hover:scale-110'
+            >
+              <Icon size={20} color='white' />
+            </a>
+          ))}
         </div>
       </div>
 
@@ -108,7 +133,7 @@ const Layout = () => {
             onClick={toggleSidebar}
             className='hover:text-orange-400'
           >
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 uppercase'>
               <AiOutlineProduct size={20}></AiOutlineProduct>
               Product
             </div>
@@ -118,7 +143,7 @@ const Layout = () => {
             onClick={toggleSidebar}
             className='hover:text-orange-400'
           >
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 uppercase' >
               <MdAccountCircle size={20}></MdAccountCircle>
               Account
             </div>
@@ -127,16 +152,28 @@ const Layout = () => {
 
         <div className='pt-16 px-4 flex items-center gap-4'>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <FaFacebookSquare size={25}></FaFacebookSquare>
+            <Link to={'https://www.facebook.com/rktrading.com.bd'}>
+              {' '}
+              <FaFacebookSquare size={25}></FaFacebookSquare>
+            </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <IoLogoYoutube size={25}></IoLogoYoutube>
+            <Link to={'https://www.youtube.com/@rktrading873'}>
+              {' '}
+              <IoLogoYoutube size={25}></IoLogoYoutube>
+            </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <FaLinkedin size={25}></FaLinkedin>
+            <Link to={'https://www.linkedin.com'}>
+              {' '}
+              <FaLinkedin size={25}></FaLinkedin>
+            </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <FaInstagramSquare size={25}></FaInstagramSquare>
+            <Link to={'https://www.instagram.com/rktradingbd'}>
+              {' '}
+              <FaInstagramSquare size={25}></FaInstagramSquare>
+            </Link>
           </div>
         </div>
       </div>
