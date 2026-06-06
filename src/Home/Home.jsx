@@ -65,7 +65,7 @@ const Home = () => {
           className='w-full h-auto object-cover block sm:block md:block lg:hidden'
         />
       </div>
-<div className='my-10 md:my-28 '>
+<div className='mx-3 my-10 md:my-28 '>
   
 <Slider></Slider>
 </div>

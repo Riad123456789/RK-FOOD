@@ -4,7 +4,7 @@ import { FaEye, FaExternalLinkAlt } from 'react-icons/fa'
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom' // Corrected import
 import ComponentWithModal from './ComponentWithModal'
-import Logo from '../../public/rk logo.svg'
+import Logo from '../../public/logo.svg'
 import { MdOutlineFavoriteBorder, MdAccountCircle } from 'react-icons/md'
 import { WishlistContext } from '../ContextApi/WishlistContext'
 import { TbCategoryPlus } from 'react-icons/tb'
@@ -56,7 +56,7 @@ const TopBar = ({ toggleSidebar }) => {
       <div className='h-14 flex items-center justify-between px-6 lg:px-20 '>
         {/* Logo */}
         <div className='hidden lg:block'>
-          <img className='w-14 h-14' src={Logo} alt='Logo' />
+          <img className='w-24 h-24' src={Logo} alt='Logo' />
         </div>
 
         {/* Sidebar Toggle (Mobile Only) */}
@@ -81,7 +81,7 @@ const TopBar = ({ toggleSidebar }) => {
             aria-label='Search'
           />
 
-          <div className='bg-[#4c270a] flex items-center justify-center px-3 rounded-r-md py-2'>
+          <div className='bg-[#102750] flex items-center justify-center px-3 rounded-r-md py-2'>
             <GrFormSearch color='white' size={25} />
           </div>
           {/* Search Results Dropdown */}
@@ -151,12 +151,12 @@ const TopBar = ({ toggleSidebar }) => {
         {/* Wishlist and Account */}
         <div className='items-center gap-6 hidden lg:flex'>
           <Link to='/Category'>
-            <div className='flex flex-col items-center px-2 py-2 bg-[#4c270a] rounded-md'>
+            <div className='flex flex-col items-center px-2 py-2 bg-[#102750] rounded-md'>
             <TbCategoryPlus size={23} color='white' />
             </div>
           </Link>
           <Link to='/Wishlist'>
-            <div className='relative p-2 rounded-md bg-[#4c270a]'>
+            <div className='relative p-2 rounded-md bg-[#102750]'>
               <MdOutlineFavoriteBorder size={23} color='white' />
               <span className='absolute -top-1 -right-3 bg-green-600 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center'>
                 {wishlist.length}
@@ -164,7 +164,7 @@ const TopBar = ({ toggleSidebar }) => {
             </div>
           </Link>
           <Link to='/Account'>
-            <div className='flex items-center gap-1 border px-3 py-2 bg-[#4c270a] rounded-md'>
+            <div className='flex items-center gap-1 border px-3 py-2 bg-[#102750] rounded-md'>
               <MdAccountCircle size={23} color='white' />
               <p className='text-xs font-semibold text-white'>Account</p>
             </div>

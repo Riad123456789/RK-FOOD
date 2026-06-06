@@ -48,10 +48,10 @@ const ContactUs = () => {
               📍 <strong>Address:</strong> House# 517/1, Jahangir Monjil, Jhikira, Wapda Road, (Nearby to Grameen Bank Branch & Area Office), Ullapara, Sirajgonj, BD
             </p>
             <p>
-              📞 <strong>Phone:</strong> +8801795579568
+              📞 <strong>Phone:</strong> +8801303149712
             </p>
             <p>
-              📧 <strong>Email:</strong> rkfoodbd@gmail.com
+              📧 <strong>Email:</strong> riadjowarder@gmail.com
             </p>
           </div>
         </div>

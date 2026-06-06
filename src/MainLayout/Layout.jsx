@@ -8,7 +8,7 @@ import { IoLogoYoutube } from 'react-icons/io'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaInstagramSquare } from 'react-icons/fa'
 import { Link, Outlet } from 'react-router-dom'
-import Logo from '../../public/rk logo.svg'
+import Logo from '../../public/logo.svg'
 import TopBar from './TopBar'
 import { WishlistContext } from '../ContextApi/WishlistContext'
 import Foother from '../Foother/Foother'
@@ -33,7 +33,7 @@ const Layout = () => {
       <div className='w-full h-9 bg-[#fe6c23]  items-center justify-between px-20 hidden lg:flex'>
         <div>
           <p className='text-xs font-semibold text-[white]'>
-            Office Time : 08:00 AM - 12:00 AM | Hotline : +8801795579568
+            Office Time : 08:00 AM - 12:00 AM | Hotline : +8801303149712
           </p>
         </div>
         {/* Social Media Icons */}
@@ -41,16 +41,16 @@ const Layout = () => {
           {[
             {
               Icon: FaFacebookSquare,
-              url: 'https://www.facebook.com/rktrading.com.bd'
+              url: 'https://riadjowarder.netlify.app/'
             },
             {
               Icon: IoLogoYoutube,
-              url: 'https://www.youtube.com/@rktrading873'
+              url: 'https://riadjowarder.netlify.app/'
             },
-            { Icon: FaLinkedin, url: 'https://www.linkedin.com' },
+            { Icon: FaLinkedin, url: 'https://riadjowarder.netlify.app/' },
             {
               Icon: FaInstagramSquare,
-              url: 'https://www.instagram.com/rktradingbd'
+              url: 'https://riadjowarder.netlify.app/'
             }
           ].map(({ Icon, url }, index) => (
             <a
@@ -91,8 +91,8 @@ const Layout = () => {
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 z-30`}
       >
-        <div className='flex justify-between items-center bg-orange-600 px-4 py-1'>
-          <img className='w-14 h-14 ' src={Logo} alt='' />
+        <div className='flex justify-between items-center bg-[#ffffff] px-4 py-1'>
+          <img className='w-16 h-14 ' src={Logo} alt='' />
           <button className='text-white text-xl' onClick={toggleSidebar}>
             ✕
           </button>
@@ -152,25 +152,25 @@ const Layout = () => {
 
         <div className='pt-16 px-4 flex items-center gap-4'>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <Link to={'https://www.facebook.com/rktrading.com.bd'}>
+            <Link to={'https://riadjowarder.netlify.app/'}>
               {' '}
               <FaFacebookSquare size={25}></FaFacebookSquare>
             </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <Link to={'https://www.youtube.com/@rktrading873'}>
+            <Link to={'https://riadjowarder.netlify.app/'}>
               {' '}
               <IoLogoYoutube size={25}></IoLogoYoutube>
             </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <Link to={'https://www.linkedin.com'}>
+            <Link to={'https://riadjowarder.netlify.app/'}>
               {' '}
               <FaLinkedin size={25}></FaLinkedin>
             </Link>
           </div>
           <div className='bg-orange-600 p-3 rounded-full'>
-            <Link to={'https://www.instagram.com/rktradingbd'}>
+            <Link to={'https://riadjowarder.netlify.app/'}>
               {' '}
               <FaInstagramSquare size={25}></FaInstagramSquare>
             </Link>

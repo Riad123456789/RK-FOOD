@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { WishlistContext } from '../ContextApi/WishlistContext'
-import { Link } from 'react-router-dom' // ✅ Corrected import
+import { Link } from 'react-router-dom'
 import { TbCurrencyTaka } from 'react-icons/tb'
-import { IoClose } from 'react-icons/io5' // Close icon
+import { IoClose } from 'react-icons/io5'
 
 const Featuredproducts = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const { addToWishlist } = useContext(WishlistContext)
-  const [selectedProduct, setSelectedProduct] = useState(null) // State for modal
-  const [mainImage, setMainImage] = useState(null) // State for main image
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [mainImage, setMainImage] = useState(null)
 
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const response = await fetch('/Fackdata.json') // ✅ Updated path (assuming it's in `public/`)
+        const response = await fetch('/Fackdata.json')
         if (!response.ok) throw new Error('Failed to fetch data')
         const data = await response.json()
         setProducts(data)
@@ -34,7 +34,7 @@ const Featuredproducts = () => {
 
   const openModal = product => {
     setSelectedProduct(product)
-    setMainImage(product.image_url) // ✅ Set initial main image
+    setMainImage(product.image_url)
   }
 
   const closeModal = () => {
@@ -43,7 +43,7 @@ const Featuredproducts = () => {
   }
 
   return (
-    <div className='px-4 md:px-2 lg:px-20 pt-16'>
+    <div className='px-4 md:px-2 lg:px-20 pt-5'>
       <h1 className='text-center font-semibold text-xl md:text-3xl md:pb-5 xl:pb-12 py-5'>
         Featured Products From <span className='text-orange-600'>RK FOOD</span>
       </h1>
@@ -51,50 +51,53 @@ const Featuredproducts = () => {
       {loading ? (
         <div className='text-center text-gray-500'>Loading products...</div>
       ) : (
-        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8 lg:gap-4 xl:gap-8'>
-          {products.slice(0,15).map(product => (
+        <div className='pt-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-8'>
+          {products.slice(0, 8).map(product => (
             <div
               key={product.id}
-              className='border rounded-sm hover:shadow-xl transition-shadow duration-300 shadow-md'
+              className='group relative rounded-2xl bg-white/70 backdrop-blur-md border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2'
             >
+              {/* IMAGE SECTION */}
               <Link to={`/ProductDetails/${product.id}`}>
-                <div className='cursor-pointer'>
-                  <div className='w-24 h-32 mx-auto m-6 overflow-hidden'>
-                    <img
-                      src={product.image_url}
-                      alt={product.name}
-                      loading='lazy' // ✅ Improved performance
-                      className='w-full h-full object-contain transition-transform duration-300 hover:scale-105'
-                    />
-                  </div>
+                <div className='relative w-full h-40 flex items-center justify-center bg-gradient-to-b from-orange-50 to-white overflow-hidden'>
+                  <img
+                    src={product.image_url}
+                    alt={product.name}
+                    loading='lazy'
+                    className='w-28 h-28 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2'
+                  />
 
-                  <div className='px-4 space-y-2 text-center'>
-                    <h3 className='font-semibold text-gray-800 text-sm md:text-lg lg:text-sm xl:text-lg'>
-                      {product.name}
-                    </h3>
-                    <div className='flex items-center justify-around'>
-                      <p className='text-sm text-gray-600'>{product.weight}</p>
-                      <div className='flex items-center justify-center'>
-                        <TbCurrencyTaka size={25} />
-                        <p className='font-bold text-xl'>{product.price}</p>
-                      </div>
+                  {product.price && (
+                    <div className='absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full shadow'>
+                      ৳ {product.price}
                     </div>
-                  </div>
+                  )}
                 </div>
               </Link>
 
-              <div className='py-1 px-2 md:px-2 pb-4 md:flex gap-2 space-y-2 md:space-y-0'>
+              {/* TEXT */}
+              <div className='px-4 py-3 space-y-1 text-center'>
+                <h3 className='font-semibold text-gray-800 text-sm md:text-base line-clamp-1'>
+                  {product.name}
+                </h3>
+
+                <p className='text-xs text-gray-500'>{product.weight}</p>
+              </div>
+
+              {/* BUTTONS */}
+              <div className='p-3 flex gap-2'>
                 <button
                   onClick={() => handleAddToWishlist(product)}
-                  className='text-xs font-medium bg-orange-500 text-white text-center w-full py-[12px] rounded-sm hover:bg-orange-600 transition-colors duration-300'
+                  className='flex-1 text-xs font-medium bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2 rounded-md shadow hover:scale-105 transition'
                 >
-                  Add to Wishlist
+                  ❤️ Wishlist
                 </button>
+
                 <button
                   onClick={() => openModal(product)}
-                  className='text-xs font-medium bg-[#3b7831] text-white text-center w-full py-[12px] rounded-sm hover:bg-[#482415] transition-colors duration-300'
+                  className='flex-1 text-xs font-medium bg-gradient-to-r from-green-600 to-green-700 text-white py-2 rounded-md shadow hover:scale-105 transition'
                 >
-                  See More
+                  👀 View
                 </button>
               </div>
             </div>
@@ -102,83 +105,74 @@ const Featuredproducts = () => {
         </div>
       )}
 
-      {/* Modal for Product Details */}
+      {/* MODAL */}
       {selectedProduct && (
         <div
           className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-2 py-2 mt-3 md:mt-0'
-          onClick={closeModal} // ✅ Allows closing by clicking outside modal
+          onClick={closeModal}
         >
           <div
             className='bg-white rounded-sm max-w-4xl w-full relative overflow-hidden shadow-xl mx-2 md:mx-0'
-            onClick={e => e.stopPropagation()} // ✅ Prevents closing when clicking inside modal
+            onClick={e => e.stopPropagation()}
           >
-            {/* Top Section with Background Color */}
-            <div className='bg-gradient-to-r from-orange-500 to-red-500 shadow-md border-b-2 text-white py-3 px-4 flex justify-between items-center'>
+            <div className='bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-4 flex justify-between items-center'>
               <Link to={`/ProductDetails/${selectedProduct.id}`}>
                 <h2 className='text-sm font-semibold cursor-pointer hover:underline'>
                   More Details
                 </h2>
               </Link>
 
-              {/* Close Button */}
               <button
                 onClick={closeModal}
-                className='text-white bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-80 transition duration-200'
+                className='text-white bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-80'
               >
                 <IoClose size={20} />
               </button>
             </div>
 
-            {/* Main Modal Content */}
-            <div className='flex flex-col md:flex-row px-4 md:px-20 py-6 md:py-12 gap-6 md:gap-20'>
-              {/* Small Images Section */}
-              <div className='flex md:flex-col flex-wrap justify-center items-center gap-2'>
+            <div className='flex flex-col md:flex-row px-4 md:px-20 py-6 gap-6'>
+              {/* thumbnails */}
+              <div className='flex md:flex-col flex-wrap gap-2'>
                 {[
                   selectedProduct.image_url,
-                  selectedProduct.image_url_1 || selectedProduct.image_url
+                  ...(selectedProduct.image_url_1
+                    ? [selectedProduct.image_url_1]
+                    : [])
                 ].map((img, index) => (
                   <img
                     key={index}
                     src={img}
-                    alt={`Product Variation ${index + 1}`}
-                    loading='lazy'
-                    className={`w-16 h-16 md:w-20 md:h-20 object-contain border rounded-sm p-1 shadow-sm cursor-pointer hover:scale-110 transition-transform duration-200 
-            ${mainImage === img ? 'border-2 border-orange-500' : ''}`}
+                    alt='thumb'
+                    className={`w-16 h-16 object-contain border rounded cursor-pointer p-1 ${
+                      mainImage === img ? 'border-orange-500 border-2' : ''
+                    }`}
                     onClick={() => setMainImage(img)}
                   />
                 ))}
               </div>
 
-              {/* Main Image & Details Section */}
-              <div className='flex flex-col md:flex-row items-center gap-6 w-full'>
-                {/* Main Image */}
-                <div className='flex justify-center'>
-                  <img
-                    src={mainImage}
-                    alt={selectedProduct.name}
-                    loading='lazy'
-                    className='w-32 h-40 md:w-52 md:h-60 object-contain transition-transform duration-300 hover:scale-105'
-                  />
-                </div>
+              {/* main */}
+              <div className='flex items-center gap-6 w-full'>
+                <img
+                  src={mainImage}
+                  alt={selectedProduct.name}
+                  className='w-40 h-40 object-contain'
+                />
 
-                {/* Product Details */}
-                <div className='text-center md:text-left'>
-                  <h2 className='text-lg md:text-xl font-semibold text-gray-900'>
+                <div>
+                  <h2 className='text-xl font-semibold'>
                     {selectedProduct.name}
                   </h2>
-                  <p className='text-gray-600 text-sm md:text-base'>
-                    {selectedProduct.weight}
-                  </p>
+                  <p className='text-gray-600'>{selectedProduct.weight}</p>
 
-                  <div className='flex justify-center md:justify-start items-center mt-2 text-orange-600 font-bold text-lg'>
-                    <TbCurrencyTaka size={20} />
+                  <div className='flex items-center text-orange-600 font-bold mt-2'>
+                    <TbCurrencyTaka />
                     <p>{selectedProduct.price}</p>
                   </div>
 
-                  {/* Wishlist Button */}
                   <button
                     onClick={() => handleAddToWishlist(selectedProduct)}
-                    className='mt-4 bg-orange-500 text-white px-4 md:px-6 py-2 rounded-md hover:bg-orange-600 transition duration-300'
+                    className='mt-4 bg-orange-500 text-white px-5 py-2 rounded-md hover:bg-orange-600'
                   >
                     Add to Wishlist
                   </button>

@@ -1,19 +1,8 @@
 [
+
+
   {
     "id": 1,
-    "name": "Coriender Powder",
-    "description": "A bright yellow spice powder made from dried turmeric roots, known for its earthy aroma and health benefits.",
-    "price": 150,
-    "weight": "100gm",
-    "category": "Powder",
-    "availability": "In Stock",
-    "rating": 4.7,
-    "popularity": "notpopular",
-    "image_url": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
-  },
-  {
-    "id": 2,
     "name": "Red Chili Powder",
     "description": "A vibrant and fiery spice made from dried red chilies, perfect for adding heat to dishes.",
     "price": 100,
@@ -23,8 +12,9 @@
     "rating": 4.5,
     "popularity": "Popular",
     "image_url": "https://i.ibb.co.com/yFtTYPV0/Screenshot-58-removebg-preview-2.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/yFtTYPV0/Screenshot-58-removebg-preview-2.png"
   },
+ 
   {
     "id": 3,
     "name": "Turmeric Powder",
@@ -36,157 +26,188 @@
     "rating": 4.6,
     "popularity": "Popular",
     "image_url": "https://i.ibb.co.com/wF631h2z/Screenshot-60-removebg-preview-1.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/wF631h2z/Screenshot-60-removebg-preview-1.png"
   },
+
   {
-    "id": 4,
-    "name": "Red Chili Powder",
-    "description": "A warm and earthy spice made from ground cumin seeds, essential in many cuisines.",
+    "id": 5,
+    "name": "Coriender Powder",
+    "description": "A bright yellow spice powder made from dried turmeric roots, known for its earthy aroma and health benefits.",
     "price": 100,
     "weight": "100gm",
+    "category": "Powder",
+    "availability": "In Stock",
+    "rating": 4.7,
+    "popularity": "notpopular",
+    "image_url": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png",
+    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+  },
+
+  {
+    "id": 7,
+    "name": "Cumin Powder",
+    "description": "A bright yellow spice powder made from dried turmeric roots, known for its earthy aroma and health benefits.",
+    "price": 100,
+    "weight": "100gm",
+    "category": "Powder",
+    "availability": "In Stock",
+    "rating": 4.7,
+    "popularity": "notpopular",
+    "image_url": "https://i.ibb.co.com/PGC78HPP/Screenshot-80-removebg-preview.png",
+    "image_url_1": "https://i.ibb.co.com/PGC78HPP/Screenshot-80-removebg-preview.png"
+  },
+
+ 
+  {
+    "id": 9,
+    "name": "Red Chili Powder-(JAR)",
+    "description": "A warm and earthy spice made from ground cumin seeds, essential in many cuisines.",
+    "price": 100,
+    "weight": "200gm",
     "category": "Powder",
     "availability": "In Stock",
     "rating": 4.8,
     "popularity": "notpopular",
     "image_url": "https://i.ibb.co.com/Lh0BGfms/Group-492.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/Lh0BGfms/Group-492.png"
   },
   {
-    "id": 5,
-    "name": "Turmeric Powder",
+    "id": 10,
+    "name": "Turmeric Powder-(JAR)",
     "description": "A traditional Indian spice blend made from a mix of ground spices like cardamom, cloves, and cinnamon.",
     "price": 100,
-    "weight": "50gm",
+    "weight": "200gm",
     "category": "Powder",
     "availability": "In Stock",
     "rating": 4.9,
     "popularity": "notpopular",
     "image_url": "https://i.ibb.co.com/BHy3ytTH/Group-491.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/BHy3ytTH/Group-491.png"
   },
   {
-    "id": 6,
-    "name": "Black Pepper Powder",
+    "id": 11,
+    "name": "Coriender Powder-(JAR)",
     "description": "Finely ground black pepper, offering a sharp and pungent flavor to enhance any dish.",
     "price":100,
-    "weight": "100gm",
+    "weight": "200gm",
     "category": "Powder",
     "availability": "Out of Stock",
     "rating": 4.3,
     "popularity": "Popular",
     "image_url": "https://i.ibb.co.com/0VXCdtYx/Group-493.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/0VXCdtYx/Group-493.png"
   },
   {
-    "id": 7,
+    "id": 12,
     "name": "Mustard Oil",
     "description": "A sweet and aromatic spice made from ground fennel seeds, often used in desserts and teas.",
     "price":100,
-    "weight": "100gm",
+    "weight": "1 Ltr",
     "category": "Oil",
     "availability": "In Stock",
     "rating": 4.6,
     "popularity": "Popular",
     "image_url": "https://i.ibb.co.com/bMQyC5By/Mask-group.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_2": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
   },
   {
-    "id": 8,
+    "id": 13,
     "name": "Mustard Oil",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
     "price": 100,
-    "weight": "100gm",
+    "weight": "5 Ltr",
     "category": "Oil",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
     "image_url": "https://i.ibb.co.com/xtfvkMGc/Group-419-removebg-preview-4.png",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_2": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
   },
   {
-    "id": 9,
-    "name": "Red chilli",
+    "id": 14,
+    "name": "Dry Red chilli-শুকনা মরিচ",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
     "image_url": "https://i.ibb.co.com/frM53vm/Dried-red-chili.jpg",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/frM53vm/Dried-red-chili.jpg"
   },
   {
-    "id": 10,
-    "name": "Coriender Seeds",
+    "id": 15,
+    "name": "Dry Turmeric-শুকনা হলুদ",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/NpkMh2W/Dry-Turmeric-5.jpg",
+    "image_url_1": "https://i.ibb.co.com/NpkMh2W/Dry-Turmeric-5.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Coriender Seeds-ধনিয়া",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
     "image_url": "https://i.ibb.co.com/rQjxZh8/Coriender-Seeds-8.jpg",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/rQjxZh8/Coriender-Seeds-8.jpg"
   },
   {
-    "id": 11,
-    "name": "Cardamom",
+    "id": 17,
+    "name": "cumin Seeds-জিরা",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
-    "category": "Spices",
-    "availability": "In Stock",
-    "rating": 4.2,
-    "popularity": "popular",
-    "image_url": "https://i.ibb.co.com/pZ6JyfH/Green-Cardamom-6.jpg",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
-  },
-  {
-    "id": 12,
-    "name": "Black Seeds",
-    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
-    "category": "Spices",
-    "availability": "In Stock",
-    "rating": 4.2,
-    "popularity": "popular",
-    "image_url": "https://i.ibb.co.com/Q7VdCdj/Image-For-News-771804-17078769479946019.webp",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
-  },
-  {
-    "id": 13,
-    "name": "cumin Seeds",
-    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
     "image_url": "https://i.ibb.co.com/ctYr2VL/organic-cumin-seed.jpg",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/ctYr2VL/organic-cumin-seed.jpg"
+  },
+  
+  {
+    "id": 18,
+    "name": "Green Cardamom-এলাচি",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/pZ6JyfH/Green-Cardamom-6.jpg",
+    "image_url_1": "https://i.ibb.co.com/pZ6JyfH/Green-Cardamom-6.jpg"
   },
   {
-    "id": 14,
-    "name": "Cinnamom",
+    "id": 19,
+    "name": "Split Cinnamom-দারচিনি",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
     "image_url": "https://i.ibb.co.com/jWQJJQ4/Cinnamom-Cassia-5.jpg",
-    "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+    "image_url_1": "https://i.ibb.co.com/jWQJJQ4/Cinnamom-Cassia-5.jpg"
   },
   {
-    "id": 15,
-    "name": "clove",
+    "id": 20,
+    "name": "clove-লবঙ্গ",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
@@ -195,16 +216,72 @@
     "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
   },
   {
-    "id": 16,
-    "name": "Turmeric",
+    "id": 21,
+    "name": "Black Cumin-কালোজিরা",
     "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
-    "price": 100,
-    "weight": "100gm",
+    "price1": 100,
+    "weight1": "100gm",
     "category": "Spices",
     "availability": "In Stock",
     "rating": 4.2,
     "popularity": "popular",
-    "image_url": "https://i.ibb.co.com/NpkMh2W/Dry-Turmeric-5.jpg",
+    "image_url": "https://i.ibb.co.com/Q7VdCdj/Image-For-News-771804-17078769479946019.webp",
     "image_url_1": "https://i.ibb.co.com/G43R9H2Y/Screenshot-61-removebg-preview.png"
+  },
+  {
+    "id": 22,
+    "name": "Lentils-মসুর ডাল",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/LXQjX6k0/istockphoto-981505752-612x612.jpg",
+    "image_url_1": "https://i.ibb.co.com/LXQjX6k0/istockphoto-981505752-612x612.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Chickpeas-ছোলার ডাল",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/5g9yRLWg/pngtree-yellow-chana-lentil-dal-grain-vegetarian-nutrition-dal-photo-image-15466662.jpg",
+    "image_url_1": "https://i.ibb.co.com/5g9yRLWg/pngtree-yellow-chana-lentil-dal-grain-vegetarian-nutrition-dal-photo-image-15466662.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Psyllium Husk-ইসবগুল ভূষি",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/W4XpRdXL/Pure-Natural-Psyllium-Organic-Husk-Psyllium-Husk1-2-1600x.webp",
+    "image_url_1": "https://i.ibb.co.com/W4XpRdXL/Pure-Natural-Psyllium-Organic-Husk-Psyllium-Husk1-2-1600x.webp"
+  },
+  {
+    "id": 25,
+    "name": "Black Cardomom-কালো এলাচি",
+    "description": "A tangy and spicy powder made from ground mustard seeds, perfect for sauces and marinades.",
+    "price1": 100,
+    "weight1": "100gm",
+    "category": "Spices",
+    "availability": "In Stock",
+    "rating": 4.2,
+    "popularity": "popular",
+    "image_url": "https://i.ibb.co.com/nwcmdnN/Sliding-Image-2.jpg",
+    "image_url_1": "https://i.ibb.co.com/nwcmdnN/Sliding-Image-2.jpg"
   }
+
+
+
+
 ]
